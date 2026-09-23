@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王小桃部落格｜旅遊・美食・露營</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">桃</span>
+        <span>王小桃部落格</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">關於小桃</a>
+        <a href="#articles">最新文章</a>
+        <a href="#categories">主題分類</a>
+        <a href="#contact">聯絡我</a>
+      </nav>
+
+      <button class="search-btn" aria-label="搜尋">⌕</button>
+    </div>
+  </header>
+
+  <!-- 首頁主視覺 -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="avatar">桃</div>
+
+        <h1>旅遊・美食・露營</h1>
+
+        <p>
+          嗨！我是王小桃 🍑 喜歡用相機記錄大自然的美好、探索各地巷弄美食，
+          <br class="desktop-only">
+          以及在星空下享受露營的愜意生活。歡迎跟我一起品味生活中的點點滴滴！
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#articles" class="btn btn-primary">◉ &nbsp;探索文章</a>
+          <a href="#about" class="btn btn-light">♙ &nbsp;關於小桃</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分類 -->
+    <section class="category-section" id="categories">
+      <div class="category-list">
+        <button class="category active" data-filter="all">🌟 全部文章</button>
+        <button class="category" data-filter="travel">✈️ 旅遊 (Travel)</button>
+        <button class="category" data-filter="food">🍰 美食 (Food)</button>
+        <button class="category" data-filter="camping">⛺ 露營 (Camping)</button>
+      </div>
+    </section>
+
+    <!-- 文章 -->
+    <section class="articles" id="articles">
+      <div class="section-title">
+        <span>✨</span>
+        <h2>最新文章</h2>
+        <p>最近的旅程與生活紀錄</p>
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card" data-category="travel">
+          <div class="card-image travel-bg">
+            <span class="tag travel-tag">✈️ 旅遊</span>
+            <span class="image-icon">🏔️</span>
+          </div>
+          <div class="card-body">
+            <p class="date">2026 / 09 / 18</p>
+            <h3>山林裡的一日小旅行</h3>
+            <p>走進森林、吹吹風，把忙碌的生活暫時放在身後。</p>
+            <a href="#" class="read-more">閱讀文章 →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="food">
+          <div class="card-image food-bg">
+            <span class="tag food-tag">🍰 美食</span>
+            <span class="image-icon">🍜</span>
+          </div>
+          <div class="card-body">
+            <p class="date">2026 / 09 / 12</p>
+            <h3>城市巷弄裡的美味小店</h3>
+            <p>收藏一間間喜歡的小店，記錄每一次令人驚喜的味道。</p>
+            <a href="#" class="read-more">閱讀文章 →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="camping">
+          <div class="card-image camping-bg">
+            <span class="tag camping-tag">⛺ 露營</span>
+            <span class="image-icon">🏕️</span>
+          </div>
+          <div class="card-body">
+            <p class="date">2026 / 09 / 05</p>
+            <h3>星空下的週末露營</h3>
+            <p>搭起帳篷、煮一頓晚餐，和夜晚一起慢慢入睡。</p>
+            <a href="#" class="read-more">閱讀文章 →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="travel">
+          <div class="card-image sea-bg">
+            <span class="tag travel-tag">✈️ 旅遊</span>
+            <span class="image-icon">🌊</span>
+          </div>
+          <div class="card-body">
+            <p class="date">2026 / 08 / 28</p>
+            <h3>海邊散步與夕陽</h3>
+            <p>沒有行程的午後，反而遇見了最喜歡的風景。</p>
+            <a href="#" class="read-more">閱讀文章 →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="food">
+          <div class="card-image cafe-bg">
+            <span class="tag food-tag">🍰 美食</span>
+            <span class="image-icon">☕</span>
+          </div>
+          <div class="card-body">
+            <p class="date">2026 / 08 / 20</p>
+            <h3>午後咖啡與甜點時光</h3>
+            <p>找一家舒服的咖啡店，讓下午慢下來。</p>
+            <a href="#" class="read-more">閱讀文章 →</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="camping">
+          <div class="card-image forest-bg">
+            <span class="tag camping-tag">⛺ 露營</span>
+            <span class="image-icon">🌲</span>
+          </div>
+          <div class="card-body">
+            <p class="date">2026 / 08 / 14</p>
+            <h3>森林裡的療癒時光</h3>
+            <p>遠離城市訊息，聽聽蟲鳴與風吹過樹梢的聲音。</p>
+            <a href="#" class="read-more">閱讀文章 →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 關於 -->
+    <section class="about" id="about">
+      <div class="about-box">
+        <div class="about-avatar">桃</div>
+        <div>
+          <p class="small-title">ABOUT ME</p>
+          <h2>我是王小桃 🍑</h2>
+          <p>
+            喜歡旅行、吃美食，也喜歡偶爾逃進山裡露營。
+            這個網站用來收藏我的生活片段，希望也能帶給你一些出發的理由。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer id="contact">
+    <p>© 2026 王小桃部落格 · 旅遊・美食・露營</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
