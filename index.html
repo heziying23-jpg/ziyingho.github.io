@@ -1,175 +1,106 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>王小桃部落格｜旅遊・美食・露營</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷與作品集 - 電腦科學學生</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- 導覽列 -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-icon">桃</span>
-        <span>王小桃部落格</span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="#about">關於小桃</a>
-        <a href="#articles">最新文章</a>
-        <a href="#categories">主題分類</a>
-        <a href="#contact">聯絡我</a>
-      </nav>
-
-      <button class="search-btn" aria-label="搜尋">⌕</button>
-    </div>
-  </header>
-
-  <!-- 首頁主視覺 -->
-  <main>
+    <!-- Hero區 -->
     <section class="hero">
-      <div class="hero-content">
-        <div class="avatar">桃</div>
-
-        <h1>旅遊・美食・露營</h1>
-
-        <p>
-          嗨！我是王小桃 🍑 喜歡用相機記錄大自然的美好、探索各地巷弄美食，
-          <br class="desktop-only">
-          以及在星空下享受露營的愜意生活。歡迎跟我一起品味生活中的點點滴滴！
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#articles" class="btn btn-primary">◉ &nbsp;探索文章</a>
-          <a href="#about" class="btn btn-light">♙ &nbsp;關於小桃</a>
+        <div class="hero-content">
+            <img src="assets/images/hero_me_790_by_998.jpg" alt="個人照片" class="hero-image">
+            <h1>熱忱資料分析的學子</h1>
+            <p>熱愛探索商業與醫療數據的電腦科學系學子</p>
         </div>
-      </div>
     </section>
 
-    <!-- 分類 -->
-    <section class="category-section" id="categories">
-      <div class="category-list">
-        <button class="category active" data-filter="all">🌟 全部文章</button>
-        <button class="category" data-filter="travel">✈️ 旅遊 (Travel)</button>
-        <button class="category" data-filter="food">🍰 美食 (Food)</button>
-        <button class="category" data-filter="camping">⛺ 露營 (Camping)</button>
-      </div>
+    <!-- 關於我 -->
+    <section class="about">
+        <h2>關於我</h2>
+        <p>我目前就讀電腦科學系三年級，熱衷於探索資料結構與演算法，也對 Python、資料分析與行銷理論充滿好奇心。曾參與商業數據分析與 FHIR 醫療儀表板兩個專案，累積了資料清理、統計與視覺化的實作經驗。</p>
     </section>
 
-    <!-- 文章 -->
-    <section class="articles" id="articles">
-      <div class="section-title">
-        <span>✨</span>
-        <h2>最新文章</h2>
-        <p>最近的旅程與生活紀錄</p>
-      </div>
-
-      <div class="card-grid">
-
-        <article class="card" data-category="travel">
-          <div class="card-image travel-bg">
-            <span class="tag travel-tag">✈️ 旅遊</span>
-            <span class="image-icon">🏔️</span>
-          </div>
-          <div class="card-body">
-            <p class="date">2026 / 09 / 18</p>
-            <h3>山林裡的一日小旅行</h3>
-            <p>走進森林、吹吹風，把忙碌的生活暫時放在身後。</p>
-            <a href="#" class="read-more">閱讀文章 →</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="food">
-          <div class="card-image food-bg">
-            <span class="tag food-tag">🍰 美食</span>
-            <span class="image-icon">🍜</span>
-          </div>
-          <div class="card-body">
-            <p class="date">2026 / 09 / 12</p>
-            <h3>城市巷弄裡的美味小店</h3>
-            <p>收藏一間間喜歡的小店，記錄每一次令人驚喜的味道。</p>
-            <a href="#" class="read-more">閱讀文章 →</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="camping">
-          <div class="card-image camping-bg">
-            <span class="tag camping-tag">⛺ 露營</span>
-            <span class="image-icon">🏕️</span>
-          </div>
-          <div class="card-body">
-            <p class="date">2026 / 09 / 05</p>
-            <h3>星空下的週末露營</h3>
-            <p>搭起帳篷、煮一頓晚餐，和夜晚一起慢慢入睡。</p>
-            <a href="#" class="read-more">閱讀文章 →</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="travel">
-          <div class="card-image sea-bg">
-            <span class="tag travel-tag">✈️ 旅遊</span>
-            <span class="image-icon">🌊</span>
-          </div>
-          <div class="card-body">
-            <p class="date">2026 / 08 / 28</p>
-            <h3>海邊散步與夕陽</h3>
-            <p>沒有行程的午後，反而遇見了最喜歡的風景。</p>
-            <a href="#" class="read-more">閱讀文章 →</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="food">
-          <div class="card-image cafe-bg">
-            <span class="tag food-tag">🍰 美食</span>
-            <span class="image-icon">☕</span>
-          </div>
-          <div class="card-body">
-            <p class="date">2026 / 08 / 20</p>
-            <h3>午後咖啡與甜點時光</h3>
-            <p>找一家舒服的咖啡店，讓下午慢下來。</p>
-            <a href="#" class="read-more">閱讀文章 →</a>
-          </div>
-        </article>
-
-        <article class="card" data-category="camping">
-          <div class="card-image forest-bg">
-            <span class="tag camping-tag">⛺ 露營</span>
-            <span class="image-icon">🌲</span>
-          </div>
-          <div class="card-body">
-            <p class="date">2026 / 08 / 14</p>
-            <h3>森林裡的療癒時光</h3>
-            <p>遠離城市訊息，聽聽蟲鳴與風吹過樹梢的聲音。</p>
-            <a href="#" class="read-more">閱讀文章 →</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- 關於 -->
-    <section class="about" id="about">
-      <div class="about-box">
-        <div class="about-avatar">桃</div>
-        <div>
-          <p class="small-title">ABOUT ME</p>
-          <h2>我是王小桃 🍑</h2>
-          <p>
-            喜歡旅行、吃美食，也喜歡偶爾逃進山裡露營。
-            這個網站用來收藏我的生活片段，希望也能帶給你一些出發的理由。
-          </p>
+    <!-- 個人興趣與特長 -->
+    <section class="interests">
+        <h2>個人興趣</h2>
+        <div class="interests-container">
+            <div class="interest-item">
+                <div class="interest-icon">🎨</div>
+                <h3>電腦繪圖</h3>
+                <p>我喜歡在數位畫布上揮灑創意，曾為客戶訂製角色與插畫，從色彩到構圖都充滿熱情。</p>
+            </div>
+            <div class="interest-item">
+                <div class="interest-icon">💻</div>
+                <h3>創意技術結合</h3>
+                <p>我常把程式碼當作畫筆，將藝術與技術融合，探索數位藝術、資料視覺化與互動介面的無限可能。</p>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- 頁尾 -->
-  <footer id="contact">
-    <p>© 2026 王小桃部落格 · 旅遊・美食・露營</p>
-  </footer>
+    <!-- 作品集 -->
+    <section class="portfolio">
+        <h2>作品集</h2>
+        <div class="portfolio-grid">
+            <!-- 商業數據分析專題 -->
+            <div class="portfolio-item">
+                <img src="assets/images/placeholder-business.png" alt="商業數據分析專題預覽" class="portfolio-image">
+                <h3>商業數據分析專題</h3>
+                <p>我使用 Python 精心清理與分析資料，打造直覺的互動儀表板，協助團隊快速掌握關鍵業務指標。</p>
+                <a href="assets/documents/placeholder-business-report.pdf" class="btn" target="_blank">查看詳細報告</a>
+            </div>
+            <!-- FHIR醫療數據儀表板 -->
+            <div class="portfolio-item">
+                <img src="assets/images/placeholder-fhir.png" alt="FHIR醫療數據儀表板預覽" class="portfolio-image">
+                <h3>FHIR醫療數據儀表板</h3>
+                <p>我以 FHIR 標準為基礎，打造友善的醫療資料視覺化介面，讓使用者輕鬆篩選與觀察趨勢。</p>
+                <a href="assets/documents/placeholder-fhir-report.pdf" class="btn" target="_blank">查看詳細報告</a>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- 技能條 -->
+    <section class="skills">
+        <h2>技能專長</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+                <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">數據分析</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+                <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Excel</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+                <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">數據視覺化</span>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%;"></div>
+                </div>
+                <span class="skill-percent">65%</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer>
+        <p>聯絡方式: your.email@example.com</p>
+        <p>&copy; 2026 個人履歷與作品集. 保留所有權利.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
