@@ -1,106 +1,448 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" data-theme="tech">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人履歷與作品集 - 電腦科學學生</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>何姿穎 | 個人形象履歷網站</title>
+  <meta name="description" content="何姿穎的個人形象履歷與專案作品集網站，融合現代科技感、雜誌編排與日系和風。">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Hero區 -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="assets/images/hero_me_790_by_998.jpg" alt="個人照片" class="hero-image">
-            <h1>熱忱資料分析的學子</h1>
-            <p>熱愛探索商業與醫療數據的電腦科學系學子</p>
+
+  <!-- 頂部導覽列 (Header & Navigation) -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        PORTFOLIO<span class="brand-badge">PRO</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">關於我</a></li>
+          <li><a href="#skills" class="nav-link">專業技能</a></li>
+          <li><a href="#projects" class="nav-link">精選專題</a></li>
+          <li><a href="#timeline" class="nav-link">經歷時間軸</a></li>
+          <li><a href="#interests" class="nav-link">興趣生活</a></li>
+          <li><a href="#contact" class="nav-link">聯絡方式</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- 風格即時切換開關 (Tech ⇄ Magazine ⇄ Japanese) -->
+        <button id="theme-toggle-btn" class="theme-switch-btn" title="切換視覺風格">
+          <span id="theme-icon">⚡</span>
+          <span id="theme-text">切換：雜誌編排風</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO 視覺首屏區 -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <span class="status-dot"></span>
+              <span>OPEN FOR OPPORTUNITIES · 2026</span>
+            </div>
+            <h1 class="hero-title">
+              用數據與程式<br>
+              <span class="text-highlight">為醫療與生活創造價值</span>
+            </h1>
+            <p class="hero-subtitle">
+              我是 <strong>何姿穎</strong>，馬偕專校人工智慧醫療應用科系三年級學生。專注於 Python 資料分析與醫療數據應用，熱衷於將複雜的資料轉化為清晰、有價值的洞察。
+            </p>
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">探索精選專題 ↓</a>
+              <a href="#contact" class="btn btn-secondary">取得聯絡 / 履歷</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="avatar-frame">
+              <img 
+                src="assets/images/01_形象照與生活照片/me_1179_by_1452.jpg" 
+                alt="何姿穎個人形象照" 
+                class="avatar-img"
+                width="1179"
+                height="1452"
+                fetchpriority="high"
+                loading="eager"
+              >
+            </div>
+            <div class="floating-badge">
+              <div style="font-size: 1.6rem;">💡</div>
+              <div>
+                <div style="font-size: 0.8rem; font-weight: 700;">數據分析思維</div>
+                <div style="font-size: 0.72rem; color: var(--text-muted);">用資料說故事，持續學習</div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- 關於我 -->
-    <section class="about">
-        <h2>關於我</h2>
-        <p>我目前就讀電腦科學系三年級，熱衷於探索資料結構與演算法，也對 Python、資料分析與行銷理論充滿好奇心。曾參與商業數據分析與 FHIR 醫療儀表板兩個專案，累積了資料清理、統計與視覺化的實作經驗。</p>
-    </section>
-
-    <!-- 個人興趣與特長 -->
-    <section class="interests">
-        <h2>個人興趣</h2>
-        <div class="interests-container">
-            <div class="interest-item">
-                <div class="interest-icon">🎨</div>
-                <h3>電腦繪圖</h3>
-                <p>我喜歡在數位畫布上揮灑創意，曾為客戶訂製角色與插畫，從色彩到構圖都充滿熱情。</p>
-            </div>
-            <div class="interest-item">
-                <div class="interest-icon">💻</div>
-                <h3>創意技術結合</h3>
-                <p>我常把程式碼當作畫筆，將藝術與技術融合，探索數位藝術、資料視覺化與互動介面的無限可能。</p>
-            </div>
+        <!-- 亮點指標數據欄 (Metrics Bar) -->
+        <div class="metrics-bar">
+          <div class="metric-item">
+            <div class="metric-number" data-counter="number" data-target="2" data-suffix="+">0+</div>
+            <div class="metric-label">核心代表專題</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" data-counter="number" data-target="3" data-suffix="+">0+</div>
+            <div class="metric-label">Python 專案實作</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" data-counter="number" data-target="1" data-suffix="+">0+</div>
+            <div class="metric-label">醫療數據分析專題</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number metric-badge" data-counter="text" data-text="AI">AI</div>
+            <div class="metric-label">人工智慧醫療應用</div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- 作品集 -->
-    <section class="portfolio">
-        <h2>作品集</h2>
-        <div class="portfolio-grid">
-            <!-- 商業數據分析專題 -->
-            <div class="portfolio-item">
-                <img src="assets/images/placeholder-business.png" alt="商業數據分析專題預覽" class="portfolio-image">
-                <h3>商業數據分析專題</h3>
-                <p>我使用 Python 精心清理與分析資料，打造直覺的互動儀表板，協助團隊快速掌握關鍵業務指標。</p>
-                <a href="assets/documents/placeholder-business-report.pdf" class="btn" target="_blank">查看詳細報告</a>
-            </div>
-            <!-- FHIR醫療數據儀表板 -->
-            <div class="portfolio-item">
-                <img src="assets/images/placeholder-fhir.png" alt="FHIR醫療數據儀表板預覽" class="portfolio-image">
-                <h3>FHIR醫療數據儀表板</h3>
-                <p>我以 FHIR 標準為基礎，打造友善的醫療資料視覺化介面，讓使用者輕鬆篩選與觀察趨勢。</p>
-                <a href="assets/documents/placeholder-fhir-report.pdf" class="btn" target="_blank">查看詳細報告</a>
-            </div>
+    <!-- 2. ABOUT ME 品牌故事區 -->
+    <section class="section" id="about" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 // ABOUT ME</span>
+          <h2 class="section-title">關於我與學習理念</h2>
+          <p class="section-desc">透過資料分析與程式實作，探索人工智慧在醫療領域的應用可能。</p>
         </div>
-    </section>
 
-    <!-- 技能條 -->
-    <section class="skills">
-        <h2>技能專長</h2>
-        <div class="skills-container">
-            <div class="skill-item">
-                <span class="skill-name">Python</span>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 70%;"></div>
-                </div>
-                <span class="skill-percent">70%</span>
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;">
+          <div>
+            <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; color: var(--text-muted);">
+              在人工智慧醫療應用的學習過程中，我發現最吸引我的並非單純的程式語法，而是「如何用資料與程式，讓醫療資訊變得更清楚、更有價值」。
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);">
+              在期末專題中，我運用 Python 進行資料清理、分析與視覺化，嘗試將商業數據與醫療數據轉化為可理解的洞察。雖然目前技術仍在起步階段，但我對學習充滿熱忱，也樂於在團隊中承擔資料處理與分析的角色。
+            </p>
+            <div style="margin-top: 24px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <span class="skill-pill">📊 資料分析</span>
+              <span class="skill-pill">🐍 Python 學習者</span>
+              <span class="skill-pill">🏥 醫療數據應用</span>
+              <span class="skill-pill">⚡ 快速學習者</span>
             </div>
-            <div class="skill-item">
-                <span class="skill-name">數據分析</span>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 75%;"></div>
-                </div>
-                <span class="skill-percent">75%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Excel</span>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 80%;"></div>
-                </div>
-                <span class="skill-percent">80%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">數據視覺化</span>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 65%;"></div>
-                </div>
-                <span class="skill-percent">65%</span>
-            </div>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 30px;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 14px;">📍 基本檔案速覽</h3>
+            <ul style="list-style: none; font-size: 0.92rem; line-height: 2; color: var(--text-muted);">
+              <li><strong>就讀學校：</strong> 馬偕醫護管理專科學校</li>
+              <li><strong>主修科系：</strong> 人工智慧醫療應用科</li>
+              <li><strong>目前年級：</strong> 專科三年級</li>
+              <li><strong>所在地：</strong> 台灣 (Taiwan)</li>
+              <li><strong>核心專長：</strong> Python 資料分析、醫療數據應用</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- 頁腳 -->
-    <footer>
-        <p>聯絡方式: your.email@example.com</p>
-        <p>&copy; 2026 個人履歷與作品集. 保留所有權利.</p>
-    </footer>
+    <!-- 3. SKILLS 專業技能儀表板 -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 // CAPABILITIES</span>
+          <h2 class="section-title">核心技能與學習工具箱</h2>
+          <p class="section-desc">以扎實的基礎課程為根基，逐步累積資料分析與醫療應用的實作能力。</p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="skills-grid">
+          <!-- 技能組 1 -->
+          <div class="skill-category-card">
+            <h3><span>💻</span> 程式與基礎課程</h3>
+            <div class="skill-list">
+              <span class="skill-pill">Python (入門)</span>
+              <span class="skill-pill">資料結構</span>
+              <span class="skill-pill">演算法</span>
+              <span class="skill-pill">Git / GitHub 版本控制</span>
+            </div>
+          </div>
+
+          <!-- 技能組 2 -->
+          <div class="skill-category-card">
+            <h3><span>📊</span> 資料分析與視覺化</h3>
+            <div class="skill-list">
+              <span class="skill-pill">Pandas 資料處理</span>
+              <span class="skill-pill">資料視覺化</span>
+              <span class="skill-pill">商業數據分析</span>
+              <span class="skill-pill">醫療數據應用</span>
+            </div>
+          </div>
+
+          <!-- 技能組 3 -->
+          <div class="skill-category-card">
+            <h3><span>🤝</span> 專案與協作工具</h3>
+            <div class="skill-list">
+              <span class="skill-pill">Notion 專案管理</span>
+              <span class="skill-pill">簡報企劃與發表</span>
+              <span class="skill-pill">團隊協作</span>
+              <span class="skill-pill">資料整理與報告</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED PROJECTS 精選專案庫 -->
+    <section class="section" id="projects" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 // SELECTED WORKS</span>
+          <h2 class="section-title">精選專題成果庫</h2>
+          <p class="section-desc">以下展示我在學校課程中完成的代表性專題。</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- 專案卡片 1 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+                <div style="font-size: 2rem; margin-bottom: 6px;">📈</div>
+                商業行銷分析專題主圖 (16:9)
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag-badge">Data Analysis</span>
+                <span class="tag-badge">Python</span>
+              </div>
+              <h3 class="project-name">商業行銷分析專題</h3>
+              <p class="project-desc">
+                運用 Python 進行商業數據的清理、分析與視覺化，從銷售與行銷資料中找出關鍵洞察，並提出具體的行銷策略建議。
+              </p>
+              <div class="project-meta-box">
+                <div><strong>負責角色：</strong> 資料分析、視覺化呈現</div>
+                <div style="margin-top: 4px;"><strong>使用技術：</strong> Python, Pandas, 資料視覺化</div>
+              </div>
+              <div class="project-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">期末專題成果</span>
+                <a href="#" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.82rem;">查看細節 →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 專案卡片 2 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+                <div style="font-size: 2rem; margin-bottom: 6px;">🏥</div>
+                FHIR 數據分析儀表板主圖 (16:9)
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag-badge">Healthcare</span>
+                <span class="tag-badge">Data Dashboard</span>
+              </div>
+              <h3 class="project-name">FHIR 數據分析儀表板建置</h3>
+              <p class="project-desc">
+                以 FHIR 醫療數據標準為基礎，建置數據分析儀表板，將複雜的醫療資料轉化為直觀的視覺化圖表，協助快速掌握關鍵資訊。
+              </p>
+              <div class="project-meta-box">
+                <div><strong>負責角色：</strong> 資料處理、儀表板建置</div>
+                <div style="margin-top: 4px;"><strong>使用技術：</strong> Python, FHIR, 資料視覺化</div>
+              </div>
+              <div class="project-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">期末專題成果</span>
+                <a href="#" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.82rem;">查看細節 →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TIMELINE 歷程時間軸 -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 // EXPERIENCE</span>
+          <h2 class="section-title">學習歷程與專題里程碑</h2>
+          <p class="section-desc">回顧各階段的學習累積與實踐成果。</p>
+        </div>
+
+        <div class="timeline" style="max-width: 800px; margin: 0 auto;">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025 - 現今</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 6px;">專科三年級 · 期末專題實作</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              完成商業行銷分析專題與 FHIR 數據分析儀表板建置，運用 Python 進行資料處理與視覺化，累積醫療數據應用的實作經驗。
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 6px;">專科二年級 · 程式基礎扎根</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              修習資料結構、演算法與 Python 程式設計等基礎課程，建立扎實的電腦科學基礎，並開始接觸資料分析。
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 6px;">專科一年級 · 踏入 AI 醫療領域</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              進入馬偕專校人工智慧醫療應用科，開始探索人工智慧與醫療應用的結合，奠定學習方向與熱忱。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. INTERESTS 興趣與生活區 -->
+    <section class="section" id="interests" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">05 // INTERESTS</span>
+          <h2 class="section-title">興趣與生活</h2>
+          <p class="section-desc">除了程式與資料分析，我也熱愛音樂與棒球，這些興趣讓我保持熱情與活力。</p>
+        </div>
+
+        <div class="interests-layout">
+          <!-- 左欄：精選收藏實體照片展示（支援分類頁籤切換） -->
+          <div class="interests-showcase">
+            <div class="interests-showcase-container">
+              <!-- 分類切換頁籤 -->
+              <div class="interests-tabs" role="tablist" aria-label="收藏分類切換">
+                <button type="button" class="interests-tab-btn active" data-target="baseball" role="tab" aria-selected="true">
+                  ⚾ 棒球簽名收藏
+                </button>
+                <button type="button" class="interests-tab-btn" data-target="bts" role="tab" aria-selected="false">
+                  🎵 BTS 小卡
+                </button>
+              </div>
+
+              <!-- 面板 1：棒球簽名球與週邊 -->
+              <div class="interests-panel active" data-panel="baseball" role="tabpanel">
+                <div class="interests-image-card">
+                  <div class="interests-image-wrapper">
+                    <img 
+                      src="assets/images/05_興趣與收藏/baseball_collections_1179_by_1179.jpg" 
+                      alt="中信兄弟棒球簽名球與偶像收藏展示牆" 
+                      class="interests-img"
+                      width="1179"
+                      height="1179"
+                      loading="lazy"
+                    >
+                    <div class="interests-image-overlay">
+                      <span class="interests-badge">⚾ 實體珍藏 · 簽名球與紀念週邊</span>
+                    </div>
+                  </div>
+                  <div class="interests-image-caption">
+                    <h4>熱血實體收藏牆</h4>
+                    <p>親自進場觀賽為中信兄弟熱血應援，珍藏每一顆得來不易的球員與啦啦隊親筆簽名球，以及喜愛的偶像周邊紀念，記錄無數青春感動時刻。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 面板 2：BTS 專輯小卡珍藏 -->
+              <div class="interests-panel" data-panel="bts" role="tabpanel">
+                <div class="interests-image-card">
+                  <div class="interests-image-wrapper">
+                    <img 
+                      src="assets/images/05_興趣與收藏/BTS_1179_by_1701.jpg" 
+                      alt="BTS 歷代專輯小卡拼成的愛心收藏" 
+                      class="interests-img"
+                      width="1179"
+                      height="1701"
+                      loading="lazy"
+                    >
+                    <div class="interests-image-overlay">
+                      <span class="interests-badge">🎵 K-POP 珍藏 · BTS小卡</span>
+                    </div>
+                  </div>
+                  <div class="interests-image-caption">
+                    <h4>BTS 歷代專輯小卡心形珍藏</h4>
+                    <p>一張張親手收集與整理的 BTS 歷代專輯小卡，記錄每一場回歸與音樂陪伴的感動，是學習與生活裡最溫暖的熱情源泉。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右欄：三組興趣分類小卡 -->
+          <div class="interests-cards">
+            <!-- 興趣卡 1 -->
+            <div class="skill-category-card">
+              <h3><span>🎵</span> 追星 · K-POP</h3>
+              <p class="interest-brief">舞台魅力與節奏感，是我在專案衝刺與學習之餘充電的最佳來源。</p>
+              <div class="skill-list">
+                <span class="skill-pill">BTS 粉絲</span>
+                <span class="skill-pill">NMIXX 粉絲</span>
+            </div>
+
+            <!-- 興趣卡 2 -->
+            <div class="skill-category-card">
+              <h3><span>⚾</span> 棒球 · 中信兄弟</h3>
+              <p class="interest-brief">熱愛球場上的拚勁與團隊精神，享受現場應援與黃潮吶喊的澎湃氣氛。</p>
+              <div class="skill-list">
+                <span class="skill-pill">中信兄弟球迷</span>
+                <span class="skill-pill">啦啦隊表演欣賞</span>
+                <span class="skill-pill">進場觀賽</span>
+              </div>
+            </div>
+
+            <!-- 興趣卡 3 -->
+            <div class="skill-category-card">
+              <h3><span>🖊️</span> 收藏 · 簽名物品</h3>
+              <p class="interest-brief">用心保存每顆簽名球與專屬應援物，把每一次感動實體化為珍貴回憶。</p>
+              <div class="skill-list">
+                <span class="skill-pill">球員簽名收藏</span>
+                <span class="skill-pill">啦啦隊簽名收藏</span>
+                <span class="skill-pill">周邊紀念品</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT 聯絡專區 -->
+    <section class="section" id="contact">
+      <div class="container" style="text-align: center; max-width: 720px;">
+        <span class="section-tag">06 // GET IN TOUCH</span>
+        <h2 class="section-title" style="margin-bottom: 16px;">期待與您交流更多可能</h2>
+        <p class="section-desc" style="margin: 0 auto 36px auto;">
+          無論是專案合作、實習機會交流，或是想聊聊資料分析與醫療應用，都非常歡迎隨時來信聯繫！
+        </p>
+
+        <div style="margin-bottom: 40px;">
+          <a href="mailto:your-email@example.com" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 32px;">
+            ✉️ 發送 Email 聯繫我
+          </a>
+        </div>
+
+        <div class="social-links" style="justify-content: center;">
+          <a href="https://github.com" target="_blank" class="social-btn" title="GitHub">GH</a>
+          <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn">IN</a>
+          <a href="mailto:your-email@example.com" class="social-btn" title="Email">@</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 (Footer) -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div style="font-size: 0.88rem; color: var(--text-muted);">
+        © <span id="current-year"></span> 個人形象履歷網站 · 馬偕專校 AI 醫療應用科
+      </div>
+      <div style="font-size: 0.82rem; color: var(--text-sub); font-family: var(--font-mono);">
+        DATA & HEALTHCARE THEMES
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
